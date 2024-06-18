@@ -1,0 +1,237 @@
+TESTES
+
+ping google.com
+
+Command Output:
+Disparando google.com [142.250.79.46] com 32 bytes de dados:
+Resposta de 142.250.79.46: bytes=32 tempo=10ms TTL=57
+Resposta de 142.250.79.46: bytes=32 tempo=14ms TTL=57
+Resposta de 142.250.79.46: bytes=32 tempo=9ms TTL=57
+Resposta de 142.250.79.46: bytes=32 tempo=10ms TTL=57
+
+Estat°sticas do Ping para 142.250.79.46:
+    Pacotes: Enviados = 4, Recebidos = 4, Perdidos = 0 (0% de
+             perda),
+Aproximar um n£mero redondo de vezes em milissegundos:
+    M°nimo = 9ms, M ximo = 14ms, MÇdia = 10ms
+
+tracert google.com
+
+Command Output:
+Rastreando a rota para google.com [142.250.79.46]
+com no m ximo 30 saltos:
+
+  1     3 ms     3 ms     3 ms  172.192.110.1 
+  2     *        *        *     Esgotado o tempo limite do pedido.
+  3     5 ms     8 ms     5 ms  179.182.46.244 
+  4     *        *        *     Esgotado o tempo limite do pedido.
+  5    31 ms    13 ms    11 ms  72.14.243.38 
+  6    17 ms    13 ms    15 ms  142.251.77.41 
+  7    13 ms    19 ms    12 ms  142.251.48.157 
+  8    22 ms    27 ms    13 ms  rio07s04-in-f14.1e100.net [142.250.79.46] 
+
+Rastreamento conclu°do.
+
+ipconfig
+
+Command Output:
+Configuraá∆o de IP do Windows
+
+
+Adaptador Ethernet Ethernet:
+
+   Estado da m°dia. . . . . . . . . . . . . .  : m°dia desconectada
+   Sufixo DNS espec°fico de conex∆o. . . . . . : 
+
+Adaptador Ethernet Ethernet 2:
+
+   Estado da m°dia. . . . . . . . . . . . . .  : m°dia desconectada
+   Sufixo DNS espec°fico de conex∆o. . . . . . : 
+
+Adaptador desconhecido Conex∆o Local:
+
+   Estado da m°dia. . . . . . . . . . . . . .  : m°dia desconectada
+   Sufixo DNS espec°fico de conex∆o. . . . . . : 
+
+Adaptador Ethernet Ethernet 3:
+
+   Sufixo DNS espec°fico de conex∆o. . . . . . : 
+   Endereáo IPv6 de link local . . . . . . . . : fe80::67c6:3962:c18a:bee0%12
+   Endereáo IPv4. . . . . . . .  . . . . . . . : 192.168.56.1
+   M scara de Sub-rede . . . . . . . . . . . . : 255.255.255.0
+   Gateway Padr∆o. . . . . . . . . . . . . . . : 
+
+Adaptador de Rede sem Fio Conex∆o Local* 1:
+
+   Estado da m°dia. . . . . . . . . . . . . .  : m°dia desconectada
+   Sufixo DNS espec°fico de conex∆o. . . . . . : 
+
+Adaptador de Rede sem Fio Conex∆o Local* 2:
+
+   Estado da m°dia. . . . . . . . . . . . . .  : m°dia desconectada
+   Sufixo DNS espec°fico de conex∆o. . . . . . : 
+
+Adaptador de Rede sem Fio Wi-Fi:
+
+   Sufixo DNS espec°fico de conex∆o. . . . . . : PROZ.LAB
+   Endereáo IPv6 de link local . . . . . . . . : fe80::8b40:2c91:7529:48a5%6
+   Endereáo IPv4. . . . . . . .  . . . . . . . : 172.192.110.146
+   M scara de Sub-rede . . . . . . . . . . . . : 255.255.255.0
+   Gateway Padr∆o. . . . . . . . . . . . . . . : 172.192.110.1
+
+netstat -e
+
+Command Output:
+Estat°sticas de interface
+
+                           Recebido         Enviado
+
+Bytes                    3504513057       266594160
+Pacotes unicast             5514558         2749789
+Pacotes n∆o unicast          100037           21126
+Descartados                       0               0
+Erros                             0               0
+Prot. desconhecidos               0
+
+systeminfo | find "Tempo de InicializaÁ„o do Sistema"
+
+Command Output:
+Tempo de Inicializaá∆o do Sistema:         12/06/2024, 14:03:42
+
+netstat -an | findstr :5000
+
+Command Output:
+  TCP    127.0.0.1:5000         0.0.0.0:0              LISTENING
+  TCP    127.0.0.1:5000         127.0.0.1:57135        ESTABLISHED
+  TCP    127.0.0.1:5000         127.0.0.1:57136        ESTABLISHED
+  TCP    127.0.0.1:57123        127.0.0.1:5000         TIME_WAIT
+  TCP    127.0.0.1:57124        127.0.0.1:5000         TIME_WAIT
+  TCP    127.0.0.1:57135        127.0.0.1:5000         ESTABLISHED
+  TCP    127.0.0.1:57136        127.0.0.1:5000         ESTABLISHED
+
+route print
+
+Command Output:
+===========================================================================
+Lista de interfaces
+ 18...5c 60 ba b0 5c 80 ......Realtek PCIe GbE Family Controller
+  7...00 ff 34 f0 76 75 ......ExpressVPN TAP Adapter
+ 11...........................ExpressVPN TUN Driver
+ 12...0a 00 27 00 00 0c ......VirtualBox Host-Only Ethernet Adapter
+ 20...da 80 83 57 5a 69 ......Microsoft Wi-Fi Direct Virtual Adapter
+  4...fa 80 83 57 5a 69 ......Microsoft Wi-Fi Direct Virtual Adapter #2
+  6...d8 80 83 57 5a 69 ......Realtek RTL8821CE 802.11ac PCIe Adapter
+  1...........................Software Loopback Interface 1
+===========================================================================
+
+Tabela de rotas IPv4
+===========================================================================
+Rotas ativas:
+Endereáo de rede          M scara   Ender. gateway       Interface   Custo
+          0.0.0.0          0.0.0.0    172.192.110.1  172.192.110.146     55
+        127.0.0.0        255.0.0.0      No v°nculo         127.0.0.1    331
+        127.0.0.1  255.255.255.255      No v°nculo         127.0.0.1    331
+  127.255.255.255  255.255.255.255      No v°nculo         127.0.0.1    331
+    172.192.110.0    255.255.255.0      No v°nculo   172.192.110.146    311
+  172.192.110.146  255.255.255.255      No v°nculo   172.192.110.146    311
+  172.192.110.255  255.255.255.255      No v°nculo   172.192.110.146    311
+     192.168.56.0    255.255.255.0      No v°nculo      192.168.56.1    281
+     192.168.56.1  255.255.255.255      No v°nculo      192.168.56.1    281
+   192.168.56.255  255.255.255.255      No v°nculo      192.168.56.1    281
+        224.0.0.0        240.0.0.0      No v°nculo         127.0.0.1    331
+        224.0.0.0        240.0.0.0      No v°nculo      192.168.56.1    281
+        224.0.0.0        240.0.0.0      No v°nculo   172.192.110.146    311
+  255.255.255.255  255.255.255.255      No v°nculo         127.0.0.1    331
+  255.255.255.255  255.255.255.255      No v°nculo      192.168.56.1    281
+  255.255.255.255  255.255.255.255      No v°nculo   172.192.110.146    311
+===========================================================================
+Rotas persistentes:
+  Nenhuma
+
+Tabela de rotas IPv6
+===========================================================================
+Rotas ativas:
+ Se destino de rede de mÇtrica      Gateway
+  1    331 ::1/128                  No v°nculo
+ 12    281 fe80::/64                No v°nculo
+  6    311 fe80::/64                No v°nculo
+ 12    281 fe80::67c6:3962:c18a:bee0/128
+                                    No v°nculo
+  6    311 fe80::8b40:2c91:7529:48a5/128
+                                    No v°nculo
+  1    331 ff00::/8                 No v°nculo
+ 12    281 ff00::/8                 No v°nculo
+  6    311 ff00::/8                 No v°nculo
+===========================================================================
+Rotas persistentes:
+  Nenhuma
+
+arp -a
+
+Command Output:
+Interface: 172.192.110.146 --- 0x6
+  Endereáo IP           Endereáo f°sico       Tipo
+  172.192.110.1         78-45-58-f8-3a-07     dinÉmico  
+  172.192.110.255       ff-ff-ff-ff-ff-ff     est tico  
+  224.0.0.22            01-00-5e-00-00-16     est tico  
+  224.0.0.251           01-00-5e-00-00-fb     est tico  
+  224.0.0.252           01-00-5e-00-00-fc     est tico  
+  239.255.255.250       01-00-5e-7f-ff-fa     est tico  
+  255.255.255.255       ff-ff-ff-ff-ff-ff     est tico  
+
+Interface: 192.168.56.1 --- 0xc
+  Endereáo IP           Endereáo f°sico       Tipo
+  192.168.56.255        ff-ff-ff-ff-ff-ff     est tico  
+  224.0.0.22            01-00-5e-00-00-16     est tico  
+  224.0.0.251           01-00-5e-00-00-fb     est tico  
+  224.0.0.252           01-00-5e-00-00-fc     est tico  
+  239.255.255.250       01-00-5e-7f-ff-fa     est tico  
+
+nbtstat -r
+
+Command Output:
+    Resoluá∆o de nomes NetBIOS e Estat°sticas de registro
+    --------------------------------------------------------
+
+    Resolvidas por difus∆o          = 0
+    Resolvido por servidor de nome  = 0
+
+    Registrado por difus∆o          = 27
+    Registrado por servidor de nome = 0
+
+hostname
+
+Command Output:
+MGJUI-LAB02N
+
+nslookup uol.com.br 8.8.8.8
+
+Command Output:
+DNS request timed out.
+    timeout was 2 seconds.
+Servidor:  UnKnown
+Address:  8.8.8.8
+
+DNS request timed out.
+    timeout was 2 seconds.
+DNS request timed out.
+    timeout was 2 seconds.
+DNS request timed out.
+    timeout was 2 seconds.
+DNS request timed out.
+    timeout was 2 seconds.
+
+netsh interface ipv4 show interfaces
+
+Command Output:
+÷nd     Met         MTU          Estado                Nome
+---  ----------  ----------  ------------  ---------------------------
+  1          75  4294967295  connected     Loopback Pseudo-Interface 1
+ 11           5        1500  disconnected  Conex∆o Local
+  6          55        1500  connected     Wi-Fi
+ 20          25        1500  disconnected  Conex∆o Local* 1
+ 18           5        1500  disconnected  Ethernet
+  4          25        1500  disconnected  Conex∆o Local* 2
+  7           5        1500  disconnected  Ethernet 2
+ 12          25        1500  connected     Ethernet 3
+
